@@ -1,11 +1,9 @@
-/* Navbar_Section */
-
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color:#010f46;
+  background-color: #010f46;
   color: white;
   padding: -12px 0;
   z-index: 1000;
@@ -29,7 +27,6 @@
 .navbar .logo a:hover {
   color: white;
 }
-
 .navbar .nav-links {
   display: flex;
   list-style-type: none;
@@ -51,8 +48,11 @@
   color: #f39c12;
   transform: scale(1.1);
 }
+
 .nav-btn {
+  display: none;
   position: absolute;
+  right: 20px;
   top: 50%;
   transform: translateY(-50%);
   background-color: rgba(0, 0, 0, 0.5);
@@ -100,7 +100,7 @@
   right: 20px;
   font-size: 20px;
   color: #f39c12;
-  background-color:#010f46;
+  background-color: #010f46;
   padding: 15px;
   border-radius: 50%;
   cursor: pointer;
@@ -156,7 +156,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color:#000000;
+  background-color: #000000;
   color: white;
   text-align: center;
   padding: 20px;
@@ -400,11 +400,11 @@
   margin: 0 auto;
 }
 .projects-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: -16px;
-    max-width: 1200px;
-    margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: -16px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 .project-card {
   position: relative;
@@ -414,7 +414,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left:35px;
+  margin-left: 35px;
 }
 
 .card-front,
@@ -475,7 +475,6 @@
   border-radius: 30px;
   transition: background-color 0.3s;
   font-size: 13px;
-
 }
 
 .card-back a:hover {
@@ -753,8 +752,8 @@
 /* Contact Section */
 /* Footer Section */
 .footer {
-  background-color:#010f46;
-  padding: 1px ;
+  background-color: #010f46;
+  padding: 1px;
   color: white;
   text-align: center;
 }
@@ -855,4 +854,41 @@
   border: none;
   margin: 11px 0;
   border-radius: 50px;
+}
+
+/* Media Query for Smaller Screens (max-width: 856px) */
+@media only screen and (max-width: 856px) {
+  /* Hide the navigation links and make the hamburger button visible */
+  .navbar .nav-links {
+    display: none;
+    /* width: 100%; */
+    text-align: left;
+    flex-direction: column;
+    position: absolute;
+    top: 10px;
+    right: 11px;
+    background-color: #010f46;
+    padding-top: 10px;
+    opacity: inherit;
+  }
+
+  .navbar .nav-links.active {
+    display: flex;
+  }
+
+  .navbar .nav-links li {
+    margin: 10px 0;
+  }
+
+  /* Show hamburger button */
+  .nav-btn {
+    display: block;
+  }
+}
+
+/* Media Query for Mobile Devices (max-width: 480px) */
+@media only screen and (max-width: 480px) {
+  .navbar .nav-links li a {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
 }
