@@ -384,7 +384,7 @@
     <section id="certifications" class="certifications">
       <h2>Certifications</h2>
       <div class="slider-wrapper">
-        <button class="nav-btn prev-btn">&#10094;</button>
+        <button class="nav-btn1 prev-btn1">&#10094;</button>
         <div class="slider">
           <!-- Duplicate first and last slides for seamless looping -->
           <div class="slide">
@@ -438,7 +438,7 @@
             <p>Issued by: IBM</p>
           </div>
         </div>
-        <button class="nav-btn next-btn">&#10095;</button>
+        <button class="nav-btn1 next-btn1">&#10095;</button>
       </div>
     </section>
 
@@ -496,102 +496,101 @@
       <i class="fas fa-arrow-up"></i>
     </div>
 
-  <script>
-    // JavaScript to toggle the navbar menu on smaller screens
-    document
-      .getElementById("hamburger-menu")
-      .addEventListener("click", function () {
-        const navbarLinks = document.querySelector(".nav-links");
-        navbarLinks.classList.toggle("active");
-      });
+    <script>
+      // JavaScript to toggle the navbar menu on smaller screens
+      document
+        .getElementById("hamburger-menu")
+        .addEventListener("click", function () {
+          const navbarLinks = document.querySelector(".nav-links");
+          navbarLinks.classList.toggle("active");
+        });
 
-    const slider = document.querySelector(".slider");
-    const slides = document.querySelectorAll(".slide");
-    const prevBtn = document.querySelector(".prev-btn");
-    const nextBtn = document.querySelector(".next-btn");
+      const slider = document.querySelector(".slider");
+      const slides = document.querySelectorAll(".slide");
+      const prevBtn = document.querySelector(".prev-btn1");
+      const nextBtn = document.querySelector(".next-btn1");
 
-    let currentIndex = 1; // Start at the second slide (since first and last are duplicates)
+      let currentIndex = 1; // Start at the second slide (since first and last are duplicates)
 
-    // Ensure slider starts at the correct position
-    slider.style.transform = `translateX(-${currentIndex * 100}%)`;
-
-    function updateSlider() {
-      console.log(`Current Index: ${currentIndex}`);
-      slider.style.transition = "transform 0.5s ease-in-out";
+      // Ensure slider starts at the correct position
       slider.style.transform = `translateX(-${currentIndex * 100}%)`;
-    }
 
-    function handleTransitionEnd() {
-      console.log("Transition Ended");
-      if (currentIndex === 0) {
-        currentIndex = slides.length - 2;
-        slider.style.transition = "none";
+      function updateSlider() {
+        console.log(`Current Index: ${currentIndex}`);
+        slider.style.transition = "transform 0.5s ease-in-out";
         slider.style.transform = `translateX(-${currentIndex * 100}%)`;
       }
-      if (currentIndex === slides.length - 1) {
-        currentIndex = 1;
-        slider.style.transition = "none";
-        slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+      function handleTransitionEnd() {
+        console.log("Transition Ended");
+        if (currentIndex === 0) {
+          currentIndex = slides.length - 2;
+          slider.style.transition = "none";
+          slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+        if (currentIndex === slides.length - 1) {
+          currentIndex = 1;
+          slider.style.transition = "none";
+          slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
       }
-    }
 
-    // Previous button functionality
-    prevBtn.addEventListener("click", () => {
-      if (currentIndex > 0) {
-        currentIndex--;
-        updateSlider();
-      }
-    });
-
-    // Next button functionality
-    nextBtn.addEventListener("click", () => {
-      if (currentIndex < slides.length - 1) {
-        currentIndex++;
-        updateSlider();
-      }
-    });
-
-    // Reset transition for seamless looping
-    slider.addEventListener("transitionend", handleTransitionEnd);
-
-    // Select all navigation links
-    const navLinks = document.querySelectorAll(".nav-links a");
-
-    // Add event listeners for each link
-    navLinks.forEach((link) => {
-      link.addEventListener("click", function () {
-        // Remove 'active' class from all links
-        navLinks.forEach((item) => item.classList.remove("active"));
-
-        // Add 'active' class to clicked link
-        link.classList.add("active");
+      // Previous button functionality
+      prevBtn.addEventListener("click", () => {
+        if (currentIndex > 0) {
+          currentIndex--;
+          updateSlider();
+        }
       });
-    });
 
-    // Get the arrow element
-    const arrowUp = document.getElementById("arrow-up");
+      // Next button functionality
+      nextBtn.addEventListener("click", () => {
+        if (currentIndex < slides.length - 1) {
+          currentIndex++;
+          updateSlider();
+        }
+      });
 
-    // Show the arrow when the user scrolls down
-    window.onscroll = function () {
-      if (
-        document.body.scrollTop > 50 ||
-        document.documentElement.scrollTop > 50
-      ) {
-        arrowUp.classList.add("show-arrow");
-      } else {
-        arrowUp.classList.remove("show-arrow");
-      }
-    };
+      // Reset transition for seamless looping
+      slider.addEventListener("transitionend", handleTransitionEnd);
 
-    // Scroll to the top when the arrow is clicked
-    arrowUp.onclick = function () {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    };
+      // Select all navigation links
+      const navLinks = document.querySelectorAll(".nav-links a");
 
-    document.querySelectorAll(".footer-link").forEach((link) => {
-      link.addEventListener("click", (event) => {});
-    });
-  </script>
+      // Add event listeners for each link
+      navLinks.forEach((link) => {
+        link.addEventListener("click", function () {
+          // Remove 'active' class from all links
+          navLinks.forEach((item) => item.classList.remove("active"));
 
-</body>
+          // Add 'active' class to clicked link
+          link.classList.add("active");
+        });
+      });
+
+      // Get the arrow element
+      const arrowUp = document.getElementById("arrow-up");
+
+      // Show the arrow when the user scrolls down
+      window.onscroll = function () {
+        if (
+          document.body.scrollTop > 50 ||
+          document.documentElement.scrollTop > 50
+        ) {
+          arrowUp.classList.add("show-arrow");
+        } else {
+          arrowUp.classList.remove("show-arrow");
+        }
+      };
+
+      // Scroll to the top when the arrow is clicked
+      arrowUp.onclick = function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      };
+
+      document.querySelectorAll(".footer-link").forEach((link) => {
+        link.addEventListener("click", (event) => {});
+      });
+    </script>
+  </body>
 </html>
