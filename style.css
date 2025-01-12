@@ -118,22 +118,6 @@
 .show-arrow {
   display: block;
 }
-/* Hamburger menu styles */
-.menu-toggle {
-  display: none;
-  cursor: pointer;
-  flex-direction: column;
-  gap: 5px;
-  padding: 10px;
-}
-
-.menu-toggle .bar {
-  width: 25px;
-  height: 3px;
-  background-color: white;
-  border-radius: 2px;
-  transition: all 0.3s ease;
-}
 
 .weblytics-logo {
   font-family: "Brush Script MT", cursive;
@@ -219,6 +203,7 @@
 }
 
 /* About Section */
+/* About Section Styling */
 .about-section {
   background-color: black;
   color: #fff;
@@ -228,9 +213,6 @@
   align-items: center;
   text-align: center;
   gap: 30px;
-  /* background-image: url("images/backg1.jpg");
-  background-repeat: no-repeat;
-  background-size: cover; */
 }
 
 .about-section h2 {
@@ -269,6 +251,7 @@
 .about-image img:hover {
   transform: scale(1.1);
 }
+
 .about-description {
   font-size: 15px;
   line-height: 1.8;
@@ -295,6 +278,8 @@
   color: #f39c12;
   transform: scale(1.1);
 }
+
+
 
 /* Skills Section */
 .skills-section {
@@ -890,5 +875,51 @@
 @media only screen and (max-width: 480px) {
   .navbar .nav-links li a {
     font-size: 14px; /* Adjust font size for smaller screens */
+  }
+}
+/* Media Query for Screens <= 960px */
+@media only screen and (max-width: 960px) {
+  .about-content-container {
+    flex-direction: column;  /* Stack the content vertically */
+    text-align: center;  /* Align content to center */
+  }
+
+  .about-image {
+    margin-right: 0;  /* Remove the margin on smaller screens */
+    margin-bottom: 20px;  /* Add margin below the image */
+    width: 200px;  /* Reduce the image size */
+    height: 200px;
+  }
+
+  .about-description {
+    font-size: 14px;  /* Adjust font size for smaller screens */
+    max-width: 100%;  /* Allow the text container to use full width */
+  }
+
+  .about-btn {
+    font-size: 14px;  /* Adjust button font size */
+    padding: 10px 25px;  /* Adjust padding for smaller screens */
+  }
+}
+
+/* Media Query for Screens <= 480px */
+@media only screen and (max-width: 480px) {
+  .about-image {
+    width: 150px;  /* Further reduce image size */
+    height: 150px;
+  }
+
+  .about-section h2 {
+    font-size: 25px;  /* Adjust heading size for smaller screens */
+  }
+
+  .about-description {
+    font-size: 13px;  /* Further adjust font size */
+    line-height: 1.6;  /* Adjust line-height for better readability */
+  }
+
+  .about-btn {
+    font-size: 13px;  /* Adjust button font size */
+    padding: 8px 20px;  /* Adjust padding for mobile screens */
   }
 }
