@@ -203,7 +203,6 @@
 }
 
 /* About Section */
-/* About Section Styling */
 .about-section {
   background-color: black;
   color: #fff;
@@ -576,9 +575,6 @@
   color: #fff;
   position: relative;
   overflow: hidden;
-  /* background-image: url("images/backg1.jpg");
-  background-repeat: no-repeat;
-  background-size: cover; */
 }
 
 .work-experience h2 {
@@ -1064,3 +1060,106 @@
     height: 100%;
   }
 }
+/* Media Query for Screens <= 864px */
+@media only screen and (max-width: 864px) {
+  .work-experience {
+    padding: 60px 10px; /* Reduce padding for smaller screens */
+  }
+
+  .work-experience h2 {
+    font-size: 24px; /* Smaller heading font size */
+    margin-bottom: 30px;
+  }
+
+  .experience-container {
+    display: flex;
+    flex-direction: column; /* Stack experience cards vertically */
+    align-items: center;
+    gap: 40px;
+  }
+
+  .experience-card {
+    width: 100%; /* Full width for each card */
+    max-width: 500px; /* Max width to avoid stretching too wide */
+    padding: 20px;
+    transform: skewY(0deg); /* Reset skew effect */
+  }
+
+  .icon-container {
+    margin-bottom: 10px;
+  }
+
+  .job-icon {
+    width: 80px; /* Reduced icon size */
+    height: 80px;
+  }
+
+  .experience-card h3 {
+    font-size: 18px; /* Adjust heading size */
+  }
+
+  .experience-card p {
+    font-size: 14px; /* Adjust paragraph size */
+  }
+
+  .timeline-marker {
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%); /* Center the timeline marker */
+  }
+
+  .work-experience::before {
+    opacity: 0.1; /* Reduce background opacity for better readability */
+  }
+}
+/* Media Query for Screens <= 467px */
+@media only screen and (max-width: 620px) {
+  .work-experience {
+    padding: 20px 5px; /* Even smaller padding for very small screens */
+  }
+
+  .work-experience h2 {
+    font-size: 16px; /* Further reduce heading size */
+    margin-bottom: 15px; /* Smaller margin below heading */
+  }
+
+  .experience-container {
+    display: flex;
+    flex-direction: column; /* Keep cards stacked vertically */
+    align-items: center;
+    gap: 15px; /* Even smaller gap for compact layout */
+  }
+
+  .experience-card {
+    width: 100%; /* Full width of the card */
+    max-width: 350px; /* Smaller max-width for cards */
+    padding: 8px; /* Even smaller padding inside cards */
+    transform: skewY(0deg); /* Remove skew effect */
+  }
+
+  .icon-container {
+    margin-bottom: 5px; /* Reduce margin around icons */
+  }
+
+  .job-icon {
+    width: 40px; /* Even smaller icon size */
+    height: 40px;
+  }
+
+  .experience-card h3 {
+    font-size: 12px; /* Smaller font size for heading */
+  }
+
+  .experience-card p {
+    font-size: 10px; /* Smaller font size for paragraph text */
+  }
+
+  .timeline-marker {
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%); /* Center timeline marker */
+  }
+
+  .work-experience::before {
+    opacity: 0.02; /* Further reduce background opacity */
+  }
+}
+
