@@ -279,8 +279,6 @@
   transform: scale(1.1);
 }
 
-
-
 /* Skills Section */
 .skills-section {
   background: black;
@@ -302,12 +300,12 @@
   margin-bottom: 40px;
 }
 
-/* Align skills in one row with animation */
 .skills-grid {
-  display: flex; /* Flexbox for horizontal layout */
+  display: flex;
   justify-content: center;
   gap: 20px;
-  overflow: hidden; /* Hide overflow during animation */
+  overflow: hidden;
+  flex-wrap: wrap;
 }
 
 .skill-item {
@@ -315,8 +313,8 @@
   border-radius: 8px;
   padding: 20px;
   text-align: center;
-  opacity: 0; /* Initially hidden */
-  transform: translateX(-50px); /* Start outside the viewport */
+  opacity: 0; 
+  transform: translateX(-50px); 
   animation: fadeIn 0.5s ease-out forwards;
 }
 
@@ -338,7 +336,6 @@
   margin-bottom: 10px;
 }
 
-/* Animation Keyframes */
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -350,7 +347,6 @@
   }
 }
 
-/* Staggered Animation using delay */
 .skill-item {
   animation-delay: var(--delay);
 }
@@ -923,3 +919,57 @@
     padding: 8px 20px;  /* Adjust padding for mobile screens */
   }
 }
+
+@media only screen and (max-width: 913px) {
+  .skills-grid {
+    gap: 15px; /* Reduce the gap between skill items */
+  }
+
+  .skill-item {
+    width: 100px; /* Set a fixed width for the skill items */
+    padding: 15px; /* Adjust padding */
+    margin: 10px 0; /* Add margin between skill items */
+    animation-delay: 0s; /* Reset animation delay */
+  }
+
+  .skill-icon {
+    width: 25px; /* Reduce the icon size */
+    height: 25px;
+  }
+
+  .skill-item h3 {
+    font-size: 12px; /* Adjust font size */
+  }
+}
+
+/* Media Query for Screens <= 768px */
+@media only screen and (max-width: 768px) {
+  .skills-grid {
+    justify-content: center; /* Align the skills to the center */
+  }
+
+  .skill-item {
+    width: 150px; /* Adjust item width for smaller screens */
+  }
+
+  .skills-container h2 {
+    font-size: 24px; /* Adjust heading font size */
+  }
+}
+
+/* Media Query for Screens <= 480px */
+@media only screen and (max-width: 480px) {
+  .skill-item {
+    width: 130px; /* Further adjust the width of skill items */
+    padding: 10px; /* Further reduce padding */
+  }
+
+  .skills-intro {
+    font-size: 14px; /* Adjust font size */
+  }
+
+  .skills-container h2 {
+    font-size: 20px; /* Adjust heading font size */
+  }
+}
+
