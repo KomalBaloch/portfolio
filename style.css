@@ -471,9 +471,6 @@
   text-align: center;
   position: relative;
   overflow: hidden;
-  /* background-image: url("images/backg1.jpg");
-  background-repeat: no-repeat;
-  background-size: cover; */
 }
 
 .education-section h2 {
@@ -490,7 +487,6 @@
   gap: 40px;
   position: relative;
 }
-
 .step {
   width: 700px;
   background: linear-gradient(145deg, #1a1a1a, #0d0d0d);
@@ -570,6 +566,7 @@
 .step strong {
   color: #fff;
 }
+
 
 /* Work Experience Section */
 .work-experience {
@@ -973,3 +970,97 @@
   }
 }
 
+/* Media Query for Screens <= 805px */
+@media only screen and (max-width: 805px) {
+  .education-steps {
+    gap: 20px; /* Reduce gap between steps */
+  }
+
+  .step {
+    width: 90%; /* Make steps width 90% of the container */
+    padding: 20px; /* Reduce padding */
+  }
+
+  .step .logo {
+    width: 60px; /* Reduce logo size */
+    height: 60px;
+  }
+
+  .step h3 {
+    font-size: 18px; /* Adjust font size */
+  }
+
+  .step p {
+    font-size: 14px; /* Adjust font size */
+  }
+
+  .education-section h2 {
+    font-size: 24px; /* Reduce the font size of the heading */
+  }
+}
+
+/* Further Adjustment for Smaller Screens <= 480px */
+@media only screen and (max-width: 480px) {
+  .step {
+    width: 100%; /* Full width for step items */
+    padding: 15px; /* Further reduce padding */
+  }
+
+  .step .logo {
+    width: 50px; /* Further reduce logo size */
+    height: 50px;
+  }
+
+  .step h3 {
+    font-size: 16px; /* Further reduce font size */
+  }
+
+  .step p {
+    font-size: 13px; /* Further reduce font size */
+  }
+
+  .education-section h2 {
+    font-size: 20px; /* Adjust the font size for mobile */
+  }
+}
+/* Media Query for Screens <= 480px */
+@media only screen and (max-width: 480px) {
+  .education-section {
+    padding: 60px 10px; /* Reduce padding for small screens */
+  }
+
+  .education-steps {
+    gap: 10px; /* Reduce the gap between steps */
+  }
+
+  .step {
+    width: 100%; /* Full width for each step */
+    padding: 10px; /* Reduce padding to avoid overcrowding */
+  }
+
+  .step .logo {
+    width: 40px; /* Further reduce logo size */
+    height: 40px;
+  }
+
+  .step h3 {
+    font-size: 13px; /* Adjust font size for headings */
+  }
+
+  .step p {
+    font-size: 11px; /* Reduce font size for readability */
+  }
+
+  .education-section h2 {
+    font-size: 16px; /* Smaller section heading font size */
+  }
+
+  .step .content {
+    padding-left: 10px; /* Reduce padding on the left of the content */
+  }
+
+  .step .logo img {
+    width: 100%;
+    height: 100%;
+  }
+}
