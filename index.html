@@ -594,6 +594,10 @@
       document.querySelectorAll(".footer-link").forEach((link) => {
         link.addEventListener("click", (event) => {});
       });
+
+      document.querySelectorAll("img").forEach((img) => {
+        img.setAttribute("loading", "lazy");
+      });
     </script>
   </body>
 </html>
