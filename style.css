@@ -1146,7 +1146,31 @@
     opacity: 0.1;
   }
 }
+@media only screen and (max-width: 1135px) {
+  .projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    width: 741px;
+    margin: 0 auto;
+}
+  }
 
+  @media only screen and (max-width: 775px) {
+    .projects-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      width: 363px;
+      margin: 0 auto;
+  }}
+  @media only screen and (max-width: 399px) {
+    .experience-card{
+      max-width:241px ;
+    }
+   }
 @media only screen and (max-width: 620px) {
   .work-experience {
     padding: 20px 5px;
