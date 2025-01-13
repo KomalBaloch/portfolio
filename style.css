@@ -1,18 +1,18 @@
 .navbar {
-    position: fixed;
-    height: 47px;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #010f46;
-    color: white;
-    padding: -12px 0;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease-in-out;
+  position: fixed;
+  height: 47px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #010f46;
+  color: white;
+  padding: -12px 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
 }
 
 .navbar .logo a {
@@ -140,7 +140,6 @@
   background-repeat: no-repeat;
   background-size: cover; */
 }
-
 
 .home-content h1 {
   font-size: 60px;
@@ -282,7 +281,7 @@
 .skills-container h2 {
   font-size: 30px;
   font-weight: 600;
-  color: #f39c12; /* Golden */
+  color: #f39c12;
   margin-bottom: 20px;
 }
 
@@ -729,33 +728,15 @@
   font-size: 15px;
   color: #ddd;
 }
-@media screen and (max-width: 1024px) {
-  .slider-wrapper {
-    width: 60%;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .slider-wrapper {
-    width: 80%;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .slider-wrapper {
-    width: 90%;
-  }
-}
 
 .nav-btn1 {
-  display: block; /* Show navigation buttons */
+  display: block;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   background-color: rgba(0, 0, 0, 0.5);
   color: #f39c12;
   border: none;
-  /* padding: 10px 15px; */
   cursor: pointer;
   font-size: 20px;
   border-radius: 50%;
@@ -812,7 +793,7 @@
   display: flex;
   justify-content: center;
   gap: 40px;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
   margin-bottom: 30px;
 }
 
@@ -880,9 +861,8 @@
   border-radius: 50px;
 }
 
-/* Media Query for Smaller Screens (max-width: 856px) */
+/* Media Query */
 @media only screen and (max-width: 856px) {
-  /* Hide the navigation links and make the hamburger button visible */
   .navbar {
     position: fixed;
     height: 47px;
@@ -898,10 +878,9 @@
     align-items: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease-in-out;
-}
+  }
   .navbar .nav-links {
     display: none;
-    /* width: 100%; */
     text-align: left;
     flex-direction: column;
     position: absolute;
@@ -919,206 +898,197 @@
   .navbar .nav-links li {
     margin: 10px 0;
   }
-
-  /* Show hamburger button */
   .nav-btn {
     display: block;
   }
 }
 
-/* Media Query for Mobile Devices (max-width: 480px) */
 @media only screen and (max-width: 480px) {
   .navbar .nav-links li a {
-    font-size: 14px; /* Adjust font size for smaller screens */
+    font-size: 14px;
   }
 }
-/* Media Query for Screens <= 960px */
+
 @media only screen and (max-width: 960px) {
   .about-content-container {
-    flex-direction: column; /* Stack the content vertically */
-    text-align: center; /* Align content to center */
+    flex-direction: column;
+    text-align: center;
   }
 
   .about-image {
-    margin-right: 0; /* Remove the margin on smaller screens */
-    margin-bottom: 20px; /* Add margin below the image */
-    width: 200px; /* Reduce the image size */
+    margin-right: 0;
+    margin-bottom: 20px;
+    width: 200px;
     height: 200px;
   }
 
   .about-description {
-    font-size: 14px; /* Adjust font size for smaller screens */
-    max-width: 100%; /* Allow the text container to use full width */
+    font-size: 14px;
+    max-width: 100%;
   }
 
   .about-btn {
-    font-size: 14px; /* Adjust button font size */
-    padding: 10px 25px; /* Adjust padding for smaller screens */
+    font-size: 14px;
+    padding: 10px 25px;
   }
 }
-
-/* Media Query for Screens <= 480px */
 @media only screen and (max-width: 480px) {
   .about-image {
-    width: 150px; /* Further reduce image size */
+    width: 150px;
     height: 150px;
   }
 
   .about-section h2 {
-    font-size: 25px; /* Adjust heading size for smaller screens */
+    font-size: 25px;
   }
 
   .about-description {
-    font-size: 13px; /* Further adjust font size */
-    line-height: 1.6; /* Adjust line-height for better readability */
+    font-size: 13px;
+    line-height: 1.6;
   }
 
   .about-btn {
-    font-size: 13px; /* Adjust button font size */
-    padding: 8px 20px; /* Adjust padding for mobile screens */
+    font-size: 13px;
+    padding: 8px 20px;
   }
 }
 
 @media only screen and (max-width: 913px) {
   .skills-grid {
-    gap: 15px; /* Reduce the gap between skill items */
+    gap: 15px;
   }
 
   .skill-item {
-    width: 100px; /* Set a fixed width for the skill items */
-    padding: 15px; /* Adjust padding */
-    margin: 10px 0; /* Add margin between skill items */
-    animation-delay: 0s; /* Reset animation delay */
+    width: 100px;
+    padding: 15px;
+    margin: 10px 0;
+    animation-delay: 0s;
   }
 
   .skill-icon {
-    width: 25px; /* Reduce the icon size */
+    width: 25px;
     height: 25px;
   }
 
   .skill-item h3 {
-    font-size: 12px; /* Adjust font size */
+    font-size: 12px;
   }
 }
 
-/* Media Query for Screens <= 768px */
 @media only screen and (max-width: 768px) {
   .skills-grid {
-    justify-content: center; /* Align the skills to the center */
+    justify-content: center;
   }
 
   .skill-item {
-    width: 150px; /* Adjust item width for smaller screens */
+    width: 150px;
   }
 
   .skills-container h2 {
-    font-size: 24px; /* Adjust heading font size */
+    font-size: 24px;
   }
 }
 
-/* Media Query for Screens <= 480px */
 @media only screen and (max-width: 480px) {
   .skill-item {
-    width: 130px; /* Further adjust the width of skill items */
-    padding: 10px; /* Further reduce padding */
+    width: 130px;
+    padding: 10px;
   }
 
   .skills-intro {
-    font-size: 14px; /* Adjust font size */
+    font-size: 14px;
   }
 
   .skills-container h2 {
-    font-size: 20px; /* Adjust heading font size */
+    font-size: 20px;
   }
 }
 
-/* Media Query for Screens <= 805px */
 @media only screen and (max-width: 805px) {
   .education-steps {
-    gap: 20px; /* Reduce gap between steps */
+    gap: 20px;
   }
 
   .step {
-    width: 90%; /* Make steps width 90% of the container */
-    padding: 20px; /* Reduce padding */
+    width: 90%;
+    padding: 20px;
   }
 
   .step .logo {
-    width: 60px; /* Reduce logo size */
+    width: 60px;
     height: 60px;
   }
 
   .step h3 {
-    font-size: 18px; /* Adjust font size */
+    font-size: 18px;
   }
 
   .step p {
-    font-size: 14px; /* Adjust font size */
+    font-size: 14px;
   }
 
   .education-section h2 {
-    font-size: 24px; /* Reduce the font size of the heading */
+    font-size: 24px;
   }
 }
 
-/* Further Adjustment for Smaller Screens <= 480px */
 @media only screen and (max-width: 480px) {
   .step {
-    width: 100%; /* Full width for step items */
-    padding: 15px; /* Further reduce padding */
+    width: 100%;
+    padding: 15px;
   }
 
   .step .logo {
-    width: 50px; /* Further reduce logo size */
+    width: 50px;
     height: 50px;
   }
 
   .step h3 {
-    font-size: 16px; /* Further reduce font size */
+    font-size: 16px;
   }
 
   .step p {
-    font-size: 13px; /* Further reduce font size */
+    font-size: 13px;
   }
 
   .education-section h2 {
-    font-size: 20px; /* Adjust the font size for mobile */
+    font-size: 20px;
   }
 }
-/* Media Query for Screens <= 480px */
+
 @media only screen and (max-width: 480px) {
   .education-section {
-    padding: 60px 10px; /* Reduce padding for small screens */
+    padding: 60px 10px;
   }
 
   .education-steps {
-    gap: 10px; /* Reduce the gap between steps */
+    gap: 10px;
   }
 
   .step {
-    width: 100%; /* Full width for each step */
-    padding: 10px; /* Reduce padding to avoid overcrowding */
+    width: 100%;
+    padding: 10px;
   }
 
   .step .logo {
-    width: 40px; /* Further reduce logo size */
+    width: 40px;
     height: 40px;
   }
 
   .step h3 {
-    font-size: 13px; /* Adjust font size for headings */
+    font-size: 13px;
   }
 
   .step p {
-    font-size: 11px; /* Reduce font size for readability */
+    font-size: 11px;
   }
 
   .education-section h2 {
-    font-size: 16px; /* Smaller section heading font size */
+    font-size: 16px;
   }
 
   .step .content {
-    padding-left: 10px; /* Reduce padding on the left of the content */
+    padding-left: 10px;
   }
 
   .step .logo img {
@@ -1126,29 +1096,28 @@
     height: 100%;
   }
 }
-/* Media Query for Screens <= 864px */
 @media only screen and (max-width: 864px) {
   .work-experience {
-    padding: 60px 10px; /* Reduce padding for smaller screens */
+    padding: 60px 10px;
   }
 
   .work-experience h2 {
-    font-size: 24px; /* Smaller heading font size */
+    font-size: 24px;
     margin-bottom: 30px;
   }
 
   .experience-container {
     display: flex;
-    flex-direction: column; /* Stack experience cards vertically */
+    flex-direction: column;
     align-items: center;
     gap: 40px;
   }
 
   .experience-card {
-    width: 100%; /* Full width for each card */
-    max-width: 500px; /* Max width to avoid stretching too wide */
+    width: 100%;
+    max-width: 500px;
     padding: 20px;
-    transform: skewY(0deg); /* Reset skew effect */
+    transform: skewY(0deg);
   }
 
   .icon-container {
@@ -1156,75 +1125,93 @@
   }
 
   .job-icon {
-    width: 80px; /* Reduced icon size */
+    width: 80px;
     height: 80px;
   }
 
   .experience-card h3 {
-    font-size: 18px; /* Adjust heading size */
+    font-size: 18px;
   }
 
   .experience-card p {
-    font-size: 14px; /* Adjust paragraph size */
+    font-size: 14px;
   }
 
   .timeline-marker {
     left: 50%;
-    transform: translateX(-50%) translateY(-50%); /* Center the timeline marker */
+    transform: translateX(-50%) translateY(-50%);
   }
 
   .work-experience::before {
-    opacity: 0.1; /* Reduce background opacity for better readability */
+    opacity: 0.1;
   }
 }
-/* Media Query for Screens <= 467px */
+
 @media only screen and (max-width: 620px) {
   .work-experience {
-    padding: 20px 5px; /* Even smaller padding for very small screens */
+    padding: 20px 5px;
   }
 
   .work-experience h2 {
-    font-size: 16px; /* Further reduce heading size */
-    margin-bottom: 15px; /* Smaller margin below heading */
+    font-size: 16px;
+    margin-bottom: 15px;
   }
 
   .experience-container {
     display: flex;
-    flex-direction: column; /* Keep cards stacked vertically */
+    flex-direction: column;
     align-items: center;
-    gap: 15px; /* Even smaller gap for compact layout */
+    gap: 15px;
   }
 
   .experience-card {
-    width: 100%; /* Full width of the card */
-    max-width: 350px; /* Smaller max-width for cards */
-    padding: 8px; /* Even smaller padding inside cards */
-    transform: skewY(0deg); /* Remove skew effect */
+    width: 100%;
+    max-width: 350px;
+    padding: 8px;
+    transform: skewY(0deg);
   }
 
   .icon-container {
-    margin-bottom: 5px; /* Reduce margin around icons */
+    margin-bottom: 5px;
   }
 
   .job-icon {
-    width: 40px; /* Even smaller icon size */
+    width: 40px;
     height: 40px;
   }
 
   .experience-card h3 {
-    font-size: 12px; /* Smaller font size for heading */
+    font-size: 12px;
   }
 
   .experience-card p {
-    font-size: 10px; /* Smaller font size for paragraph text */
+    font-size: 10px;
   }
 
   .timeline-marker {
     left: 50%;
-    transform: translateX(-50%) translateY(-50%); /* Center timeline marker */
+    transform: translateX(-50%) translateY(-50%);
   }
 
   .work-experience::before {
-    opacity: 0.02; /* Further reduce background opacity */
+    opacity: 0.02;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .slider-wrapper {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .slider-wrapper {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .slider-wrapper {
+    width: 90%;
   }
 }

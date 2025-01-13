@@ -73,7 +73,8 @@
       <div class="skills-container">
         <h2>My Skills</h2>
         <p class="skills-intro">
-          With my technical skills and analytical mindset, I create smart, data-driven solutions that make a real impact.
+          With my technical skills and analytical mindset, I create smart,
+          data-driven solutions that make a real impact.
         </p>
 
         <div class="skills-grid">
@@ -451,17 +452,13 @@
         <div class="footer-links">
           <!-- Email -->
           <a
-          href="mailto:komalbalochhasni@gmail.com"
-          class="footer-link"
-          target="_blank"
-        >
-          <img
-            src="images/gmail.png"
-            alt="Gmail Icon"
-            class="gmail-icon"
-          />
-          <span>Gmail</span>
-        </a>
+            href="mailto:komalbalochhasni@gmail.com"
+            class="footer-link"
+            target="_blank"
+          >
+            <img src="images/gmail.png" alt="Gmail Icon" class="gmail-icon" />
+            <span>Gmail</span>
+          </a>
           <!-- GitHub -->
           <a
             href="https://github.com/KomalBaloch"
@@ -504,13 +501,13 @@
           navbarLinks.classList.toggle("active");
         });
 
-// Close the menu when a nav-link is clicked
-document.querySelectorAll(".nav-links a").forEach(link => {
-  link.addEventListener("click", function () {
-    const navbarLinks = document.querySelector(".nav-links");
-    navbarLinks.classList.remove("active");
-  });
-});
+      // Close the menu when a nav-link is clicked
+      document.querySelectorAll(".nav-links a").forEach((link) => {
+        link.addEventListener("click", function () {
+          const navbarLinks = document.querySelector(".nav-links");
+          navbarLinks.classList.remove("active");
+        });
+      });
       const slider = document.querySelector(".slider");
       const slides = document.querySelectorAll(".slide");
       const prevBtn = document.querySelector(".prev-btn1");
