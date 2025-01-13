@@ -1215,3 +1215,8 @@
     width: 90%;
   }
 }
+@media (max-width: 600px) {
+  .arrow-up {
+    display: none !important;
+  }
+}
