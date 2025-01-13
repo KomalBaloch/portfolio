@@ -504,6 +504,13 @@
           navbarLinks.classList.toggle("active");
         });
 
+// Close the menu when a nav-link is clicked
+document.querySelectorAll(".nav-links a").forEach(link => {
+  link.addEventListener("click", function () {
+    const navbarLinks = document.querySelector(".nav-links");
+    navbarLinks.classList.remove("active");
+  });
+});
       const slider = document.querySelector(".slider");
       const slides = document.querySelectorAll(".slide");
       const prevBtn = document.querySelector(".prev-btn1");
