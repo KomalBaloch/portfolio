@@ -1220,3 +1220,10 @@
     display: none !important;
   }
 }
+@media (max-width: 432px) {
+  .footer-link {
+   font-size:11px;
+   display: flex;
+  flex-direction: column;
+  }
+}
