@@ -1,36 +1,100 @@
+.home-content .btn:hover,
+.about-btn:hover {
+  background-color: white;
+  color: #f39c12;
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(243,156,18,0.3);
+}
+.navbar .nav-links li a:hover {
+  color: #f39c12;
+  transform: scale(1.1);
+  text-shadow: 0 0 5px #f39c12;
+}
+.card-back {
+  background: linear-gradient(135deg, #010f46 0%, #0b0b0b 100%);
+}
+.skill-item:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 6px 20px rgba(243, 156, 18, 0.4);
+}
+.experience-card {
+  background: #161616;
+  color: #fff;
+}
+.experience-card p {
+  color: #ddd;
+}
+.skill-item:nth-child(1) { --delay: 0s; }
+.skill-item:nth-child(2) { --delay: 0.1s; }
+.skill-item:nth-child(3) { --delay: 0.2s; }
+/* Continue for all items */
+.card-front, .card-back {
+  transition: transform 0.6s ease-in-out;
+}
+.footer-link:hover {
+  border-image: linear-gradient(45deg, #f39c12, #c9a227) 1;
+}
+.projects-container {
+  gap: 20px;
+}
+.skills-grid {
+  gap: 15px;
+}
+.skill-item {
+  padding: 20px 15px; /* for touch devices */
+}
+.about-btn, .home-content .btn {
+  padding: 15px 35px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+}
+h1, h2, h3 {
+  color: var(--gold);
+  letter-spacing: 0.5px;
+}
+
+
 .navbar {
   position: fixed;
-  height: 47px;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #010f46;
-  color: white;
-  padding: -12px 0;
-  z-index: 1000;
+  height: 50px;
+  background: linear-gradient(135deg, #010f46 0%, #0b0b0b 100%);
+  color: #e6e6e6; /* light gray text */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease-in-out;
+  padding: 0 20px;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  border-bottom: 1px solid #4e4242; /* subtle border for separation */
 }
 
 .navbar .logo a {
-  color: #f39c12;
+  color: #f39c12; /* gold accent */
   font-size: 22px;
-  text-decoration: none;
   font-weight: bold;
   letter-spacing: 1px;
-  padding-left: 20px;
-  transition: color 0.3s ease;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .navbar .logo a:hover {
   color: white;
+  transform: scale(1.05);
 }
+
 .navbar .nav-links {
   display: flex;
-  list-style-type: none;
+  list-style: none;
 }
 
 .navbar .nav-links li {
@@ -38,17 +102,18 @@
 }
 
 .navbar .nav-links li a {
-  color: white;
-  text-decoration: none;
-  font-size: 12px;
+  color: #e6e6e6; /* light gray links */
+  font-size: 14px;
   font-weight: 500;
+  text-decoration: none;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .navbar .nav-links li a:hover {
-  color: #f39c12;
+  color: #f39c12; /* gold hover */
   transform: scale(1.1);
 }
+
 
 .nav-btn {
   display: none;
@@ -756,10 +821,12 @@
 }
 /* Contact Section */
 .footer {
-  background-color: #010f46;
-  padding: 1px;
-  color: white;
+  background: linear-gradient(135deg, #010f46 0%, #0b0b0b 100%);
+  padding: 40px 20px;
+  color: #e6e6e6; /* light gray text */
   text-align: center;
+  border-top: 1px solid #333;
+  box-shadow: inset 0 5px 10px rgba(0,0,0,0.2);
 }
 
 .footer-container {
@@ -767,47 +834,39 @@
   margin: 0 auto;
   animation: fadeIn 2s ease-in-out;
 }
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+
 .footer h2 {
-  font-size: 30px;
-  color: #f39c12;
-  margin-bottom: 10px;
+  font-size: 28px;
+  color: #f39c12; /* gold accent */
+  margin-bottom: 15px;
 }
 
 .footer-intro {
   font-size: 15px;
-  color: #ddd;
+  color: #ccc; /* softer than white */
   margin-bottom: 30px;
 }
 
 .footer-links {
   display: flex;
   justify-content: center;
-  gap: 40px;
+  gap: 30px;
   flex-wrap: wrap;
   margin-bottom: 30px;
 }
 
 .footer-link {
-  color: white;
+  color: #e6e6e6;
   text-decoration: none;
   font-size: 12px;
   display: flex;
   align-items: center;
   gap: 10px;
-  transition: transform 0.3s ease, color 0.3s ease;
-  padding: 10px 20px;
+  transition: transform 0.3s ease, color 0.3s ease, border 0.3s ease;
+  padding: 8px 15px;
   border: 1px solid transparent;
   border-radius: 5px;
+  background: rgba(255,255,255,0.05);
 }
 
 .footer-link i {
@@ -816,9 +875,10 @@
 }
 
 .footer-link:hover {
-  transform: translateY(-5px);
-  color: #f39c12;
+  transform: translateY(-3px);
+  color: #f39c12; /* gold hover */
   border-color: #f39c12;
+  background: rgba(243,156,18,0.1);
 }
 
 .footer-link:hover i {
@@ -826,7 +886,7 @@
 }
 
 .footer-bottom {
-  margin-top: 30px;
+  margin-top: 20px;
   font-size: 14px;
   color: #aaa;
 }
@@ -838,17 +898,21 @@
 .footer a:hover {
   color: #f39c12;
 }
-.footer-link i.fa-envelope {
-  color: #f62104;
+
+/* Social icons customization */
+.footer-link i.fa-envelope { color: #f62104; }
+.footer-link i.fa-github { color: #efeded; }
+.footer-link i.fa-linkedin { color: #146794; }
+
+/* Divider if needed */
+.divider-gradient {
+  height: 3px;
+  width: 80px;
+  background: linear-gradient(to right, #f39c12, #000);
+  border-radius: 50px;
+  margin: 15px auto;
 }
 
-.footer-link i.fa-github {
-  color: #efeded;
-}
-
-.footer-link i.fa-linkedin {
-  color: #146794;
-}
 .gmail-icon {
   width: 20px;
   height: 20px;
