@@ -928,32 +928,17 @@ h1, h2, h3 {
 
 /* Media Query */
 @media only screen and (max-width: 856px) {
-  .navbar {
-    position: fixed;
-    height: 47px;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #010f46;
-    color: white;
-    padding: -12px 0;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease-in-out;
-  }
   .navbar .nav-links {
     display: none;
-    text-align: left;
     flex-direction: column;
     position: absolute;
-    top: 10px;
-    right: 11px;
+    top: 50px; /* below navbar */
+    right: 0;
+    width: 100%; /* full width */
     background-color: #010f46;
-    padding-top: 10px;
-    opacity: inherit;
+    padding: 20px 0;
+    text-align: center;
+    z-index: 999;
   }
 
   .navbar .nav-links.active {
@@ -961,12 +946,15 @@ h1, h2, h3 {
   }
 
   .navbar .nav-links li {
-    margin: 10px 0;
+    margin: 15px 0;
   }
+
   .nav-btn {
     display: block;
+    z-index: 1000;
   }
 }
+
 
 @media only screen and (max-width: 480px) {
   .navbar .nav-links li a {
